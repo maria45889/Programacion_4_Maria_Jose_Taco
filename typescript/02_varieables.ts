@@ -1,11 +1,12 @@
 const PI: number = 3.14159;
 const IVA: number = 15;
 const SERVICIO_API: number = 0.18;
+const activo: boolean = false;
 
 console.log("Valor de PI:", PI);
 console.log("Valor de IVA:", IVA);
 console.log("Valor de SERVICIO_API:", SERVICIO_API);
-
+console.log("Valor de activo:", activo);
 
 //let 
 
