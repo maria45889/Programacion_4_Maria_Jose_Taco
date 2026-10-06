@@ -1,17 +1,21 @@
 # =========================
-# 📦 Node.js / JavaScript
+# 📦 Node.js / JavaScript / TypeScript
 # =========================
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
+bun-debug.log*
+
+# Dependencias y cachés
+.npm/
+.yarn/
+.pnpm-store/
+.cache/
 
 # =========================
-# ⚛️ React / Frontend
+# ⚛️ React / Next.js / Frontend
 # =========================
 build/
 dist/
@@ -25,45 +29,80 @@ coverage/
 # =========================
 dist/
 coverage/
-.env
-.env.*
-!.env.example
+
+# =========================
+# 📱 React Native / Expo
+# =========================
+.expo/
+.expo-shared/
+web-build/
+.metro-health-check*
+*.jks
+*.keystore
+
+# =========================
+# 🤖 Android / Android Studio
+# =========================
+.gradle/
+local.properties
+/captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.apks
+*.dex
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+
+# =========================
+# 🦋 Flutter / Dart
+# =========================
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
 
 # =========================
 # 🔐 Variables de entorno
 # =========================
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
+!.env.example
 
 # =========================
 # 🗂️ Archivos del sistema
 # =========================
 .DS_Store
 Thumbs.db
+Desktop.ini
 
 # =========================
 # 🧰 IDEs / Editores
 # =========================
 
-# IntelliJ / WebStorm / Android Studio
-.idea/
-*.iml
-
 # VS Code
 .vscode/
 *.code-workspace
 
+# Vim / Nano / otros editores
+*.swp
+*.swo
+*~
+
 # =========================
-# 🧱 Archivos de compilación
+# 🧱 Archivos temporales / compilación
 # =========================
-build/
-dist/
 .tmp/
 .temp/
 .cache/
+.parcel-cache/
+.eslintcache
 
 # =========================
 # 🐧 Logs
@@ -72,7 +111,7 @@ logs/
 *.log
 
 # =========================
-# 🐳 Docker (opcional)
+# 🐳 Docker
 # =========================
 .dockerignore
 
@@ -81,35 +120,18 @@ logs/
 # =========================
 coverage/
 .nyc_output/
+test-results/
+playwright-report/
+blob-report/
 
 # =========================
-# 📱 Android (si usas algo híbrido)
+# 📁 Monorepos
 # =========================
-.gradle/
-local.properties
-/captures
-.externalNativeBuild
-.cxx
-
-# =========================
-# ⚙️ Otros
-# =========================
-*.swp
-*.swo
-*~
-
-# =========================
-# 📁 Monorepo (muy importante)
-# =========================
-# Ignorar node_modules en subcarpetas
 **/node_modules/
-
-# Ignorar builds en subcarpetas
 **/dist/
 **/build/
 **/.next/
-
-# Ignorar archivos env en subcarpetas
+**/.expo/
 **/.env
 **/.env.*
 
@@ -119,3 +141,20 @@ local.properties
 *.pem
 *.key
 *.crt
+*.p12
+*.pfx
+
+# =========================
+# 🗃️ Bases de datos locales
+# =========================
+*.sqlite
+*.sqlite3
+*.db
+
+# =========================
+# 💾 Archivos de respaldo
+# =========================
+*.bak
+*.backup
+*.old
+*.orig
